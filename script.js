@@ -18,3 +18,20 @@ const appearOnScroll = new IntersectionObserver(function(entries) {
 faders.forEach(fader => {
     appearOnScroll.observe(fader);
 });
+// Mostrar/ocultar botão de voltar ao topo
+window.onscroll = function() {
+    const backToTop = document.getElementById("backToTop");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        backToTop.style.display = "block";
+    } else {
+        backToTop.style.display = "none";
+    }
+};
+
+// Função para voltar ao topo ao clicar
+document.getElementById("backToTop").addEventListener("click", function(){
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
