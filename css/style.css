@@ -8,12 +8,8 @@ body {
     background: linear-gradient(135deg, #c9d6ff 0%, #e2e2e2 100%);
     font-family: 'Poppins', sans-serif;
     margin: 0;
-    padding: 20px;
+    padding: 0;
     color: #212529;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
 }
 
 /* Cabeçalho */
@@ -21,20 +17,17 @@ header {
     width: 100%;
     background-color: #ffffff;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    position: fixed;
+    position: static;
     top: 0;
     left: 0;
     z-index: 1000;
-    border-radius: 0 0 16px 16px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
-
 
 .navbar {
     display: flex;
     justify-content: center;
-    gap: 40px;
-    padding: 20px 0;
+    gap: 30px;
+    padding: 15px 0;
     flex-wrap: wrap;
 }
 
@@ -52,34 +45,33 @@ header {
 
 /* Container principal */
 .container {
-    max-width: 900px;
-    width: 100%;
-    margin-top: 130px; /* Compensa a altura do header fixo */
-    padding: 0 20px;
+    max-width: 1000px;
+    width: 95%;
+    margin: 20px auto 0;
+    padding: 0 15px;
 }
 
 /* Título principal */
 .Principal {
     text-align: center;
-    font-size: 2.8em;
+    font-size: 2.5em;
     font-weight: 700;
-    margin-bottom: 40px;
+    margin: 30px 0;
 }
 
 /* Subtítulos */
 .Subtitulos {
     color: #2c3e50;
-    font-size: 2em;
-    margin-top: 50px;
-    margin-bottom: 20px;
+    font-size: 1.8em;
+    margin: 30px 0 20px;
     text-align: center;
 }
 
 /* Estilos de texto */
 .a, .b {
     font-style: normal;
-    margin: 15px 0;
-    line-height: 1.7;
+    margin: 10px 0;
+    line-height: 1.6;
 }
 
 .a {
@@ -91,27 +83,27 @@ header {
 }
 
 ol {
-    margin-left: 30px;
-    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-bottom: 15px;
 }
 
 li {
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
 /* Cards */
 .card {
     background-color: #ffffff;
-    border-radius: 20px;
-    padding: 30px;
-    margin-bottom: 30px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     width: 100%;
     transition: transform 0.3s ease;
 }
 
 .card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-4px);
 }
 
 /* Imagens */
@@ -119,18 +111,18 @@ li {
     display: block;
     max-width: 100%;
     height: auto;
-    margin: 0 auto 20px;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0 auto 15px;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* Grid de ícones */
 .icon-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 20px;
     justify-items: center;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 .icon-item {
@@ -138,9 +130,9 @@ li {
 }
 
 .icon-item img {
-    width: 80px;
-    height: 80px;
-    margin-bottom: 10px;
+    width: 70px;
+    height: 70px;
+    margin-bottom: 8px;
     transition: transform 0.3s ease;
 }
 
@@ -157,20 +149,19 @@ li {
 /* Botão voltar ao topo */
 #backToTop {
     position: fixed;
-    bottom: 30px;
-    right: 30px;
+    bottom: 25px;
+    right: 25px;
     z-index: 999;
     background-color: #3498db;
     color: white;
     border: none;
-    outline: none;
-    width: 55px;
-    height: 55px;
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
-    font-size: 26px;
+    font-size: 22px;
     cursor: pointer;
     display: none;
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
     transition: background-color 0.3s, transform 0.3s;
 }
 
@@ -185,8 +176,7 @@ footer {
     background-color: #2c3e50;
     color: #ffffff;
     text-align: center;
-    padding: 20px;
-    margin-top: 50px;
+    padding: 15px;
     font-size: 0.9em;
 }
 
@@ -202,49 +192,29 @@ footer {
     transform: translateY(0);
 }
 
-/* Responsividade para celulares */
+/* Responsivo para celular */
 @media (max-width: 768px) {
-    .container {
-        padding: 20px;
-    }
-
     .Principal {
-        font-size: 1.8em;
-        text-align: center;
+        font-size: 2em;
     }
 
     .Subtitulos {
-        font-size: 1.4em;
-        text-align: center;
+        font-size: 1.5em;
     }
 
     .navbar {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-        padding: 15px 0;
-    }
-
-    .card {
-        padding: 20px;
-    }
-
-    .img-section {
-        width: 100%;
-        height: auto;
-        border-radius: 12px;
+        gap: 15px;
     }
 
     .icon-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
     }
 
     #backToTop {
-        width: 45px;
-        height: 45px;
-        font-size: 20px;
         bottom: 20px;
         right: 20px;
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
     }
 }
